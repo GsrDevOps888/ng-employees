@@ -1,3 +1,23 @@
-<p>
-  employee-list works!
-</p>
+
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td class="two wide column ui medium head">
+        {{ employee.firstName }}
+      </td>
+      <td class="two wide column ui medium head">
+        {{ employee.lastName }}
+      </td>
+      <td class="two wide column ui medium head">
+        {{ employee.salary }}
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,3 +1,24 @@
-<p>
-  employee works!
-</p>
+<form class="ui large form segment">
+  <h3 class="ui header">Add an employee</h3>
+
+  <div class="field">
+    <label for="firstName">First Name:</label>
+    <input name="firstName" id="firstName" #newFirstName>  <!-- changed -->
+  </div>
+  <div class="field">
+    <label for="lastName">Last Name:</label>
+    <input name="lastName" id="lastName" #newLastName> <!-- changed -->
+  </div>
+
+  <div class="field">
+    <label for="salary">Salary:</label>
+    <input name="salary" id="salary" #newSalary> <!-- changed -->
+  </div>
+
+  <!-- added this button -->
+  <button (click)="addEmployee(newFirstName, newLastName, newSalary)"
+          class="ui positive right floated button">
+    Save Employee
+  </button>
+
+</form>
