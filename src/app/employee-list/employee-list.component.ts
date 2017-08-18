@@ -10,10 +10,21 @@ import { EmployeeService } from '../employee.service';
 export class EmployeeListComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'row';
   @Input() employees: Employee[];
+  @Input() employee: Employee;
+
 
   constructor(
     private employeeService: EmployeeService
   ) {
+  }
+
+  deleteEmployee(firstName: string,
+                 lastName: string,
+                 salary: string,
+                 i: number
+               ) {
+    this.employeeService.
+      deleteEmployee(i);
   }
 
   ngOnInit(

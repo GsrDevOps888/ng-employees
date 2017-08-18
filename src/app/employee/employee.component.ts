@@ -23,4 +23,5 @@ export class EmployeeComponent implements OnInit {
       return this.employeeService.
         addEmployee(firstName, lastName, salary);
     }
+
 }

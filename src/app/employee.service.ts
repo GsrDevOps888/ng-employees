@@ -29,4 +29,7 @@ export class EmployeeService {
     return Promise.resolve(this.employees);
   }
 
+  public deleteEmployee(i: number): void {
+    this.employees.splice(i, 1);
+  }
 }

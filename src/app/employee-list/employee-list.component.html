@@ -2,13 +2,24 @@
 <table class="ui celled table">
   <thead>
     <tr>
+      <th></th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Salary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let employee of employees">
+    <tr *ngFor="let employee of employees; let i = index;">
+      <td class="one wide column">
+        <button (click)="deleteEmployee(employee.firstName,
+                          employee.lastName,
+                          employee.salary,
+                          i
+                        )"
+                class="ui positive floated button">
+          Delete
+        </button>
+      </td>
       <td class="two wide column ui medium head">
         {{ employee.firstName }}
       </td>
